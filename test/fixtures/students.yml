@@ -1,0 +1,9 @@
+john:
+  first_name: John
+  last_name: Doe
+  email: john@doe.com
+
+mary:
+  first_name: Mary
+  last_name: Doe
+  email: maey@doe.com
