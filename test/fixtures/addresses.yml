@@ -1,0 +1,11 @@
+john_horea:
+  student_id: 1
+  country: Romania
+  city: Cluj-Napoca
+  street: Horea
+
+john_donath:
+  student_id: 1
+  country: Romania
+  city: Cluj-Napoca
+  street: Donath
