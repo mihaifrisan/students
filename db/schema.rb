@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20140617154909) do
   enable_extension "plpgsql"
 
   create_table "addresses", force: true do |t|
-    t.integer  "student_id"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
     t.string   "country"
     t.string   "city"
     t.string   "street"

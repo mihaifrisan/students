@@ -20,6 +20,12 @@
   <%= f.label 'Email' %>
   <%= f.text_field :email %>
   <br/>
+  <%= f.fields_for :addresses do |fa| %>
+    <%= fa.label 'Country' %>
+    <%= fa.text_field :country %>
+    <%= fa.label 'City' %>
+    <%= fa.text_field :city %>
+  <% end %>
   <br/>
   <%= f.submit %>
 

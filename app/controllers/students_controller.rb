@@ -19,6 +19,7 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id])
+    @student.addresses << Address.new
   end
 
   def update
@@ -41,9 +42,9 @@ class StudentsController < ApplicationController
     def student_params
       params.required(:student).permit(:email,
         :first_name,
-        :last_name
+        :last_name,
+        addresses_attributes: [:country, :city]
       )
-
     end
 
 end

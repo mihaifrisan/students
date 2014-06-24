@@ -1,3 +1,5 @@
 Students::Application.routes.draw do
-  resources :students
+  resources :students do
+    resources :courses
+  end
 end

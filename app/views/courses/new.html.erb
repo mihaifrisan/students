@@ -1,0 +1,19 @@
+<% if @student_course.errors.any? %>
+    <div id="error_explanation">
+
+      <h2><%= pluralize(@student_course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <% @student_course.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<%= form_for(@student_course, url: {action: 'create', method: :post}) do |f| %>
+  <%= f.label 'Course' %>
+  <%= select('student_course', 'course_id', @courses.collect{|course| [course.name, course.id]}) %>
+  <br/>
+  <%= f.submit %>
+
+<% end %>

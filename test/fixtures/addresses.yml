@@ -1,11 +1,13 @@
 john_horea:
-  student_id: 1
+  addressable_id: 1
+  addressable_type: 'Student'
   country: Romania
   city: Cluj-Napoca
   street: Horea
 
 john_donath:
-  student_id: 1
+  addressable_id: 1
+  addressable_type: 'Student'
   country: Romania
   city: Cluj-Napoca
   street: Donath

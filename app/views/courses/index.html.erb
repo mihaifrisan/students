@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @student.courses.each do |course| %>
+    <tr>
+      <td><%= course.name %></td>
+      <td><%#= link_to 'Delete', course, method: :delete, confirm: 'Are you sure?' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Add course', new_student_course_path %>
