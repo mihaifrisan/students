@@ -20,12 +20,6 @@
   <%= f.label 'Email' %>
   <%= f.text_field :email %>
   <br/>
-  <%= f.label 'Password' %>
-  <%= f.text_field :password %>
-  <br/>
-  <%= f.label 'Password Confirmation' %>
-  <%= f.text_field :password_confirmation %>
-  <br/>
   <%= f.fields_for :addresses do |fa| %>
     <%= fa.label 'Country' %>
     <%= fa.text_field :country %>

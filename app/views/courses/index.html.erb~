@@ -12,3 +12,7 @@
 
 <%= link_to 'Add course', new_student_course_path %>
 
+
+
+<td><%= link_to 'Destroy', article_tag_path(@article, tag), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

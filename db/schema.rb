@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617154909) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140708142707) do
 
   create_table "addresses", force: true do |t|
     t.integer  "addressable_id"
@@ -39,7 +36,11 @@ ActiveRecord::Schema.define(version: 20140617154909) do
     t.text     "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
   end
+
+  add_index "students", ["email"], name: "index_students_on_email", unique: true, using: :btree
 
   create_table "students_courses", force: true do |t|
     t.integer  "student_id"

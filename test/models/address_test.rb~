@@ -6,7 +6,7 @@ class AddressTest < ActiveSupport::TestCase
     address = addresses(:john_horea)
     #assert(address.student.class.name == 'Student')
     assert(address.addressable_type == 'Student')
-    #assert(address.student == students(:john))
+    assert(address.student == students(:john))
   end
 
 end
