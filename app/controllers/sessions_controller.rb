@@ -1,0 +1,23 @@
+class SessionsController < ApplicationController
+
+  skip_before_filter :require_login, only: [:new, :create]
+
+  def new
+    @student=Student.new
+  end
+  
+  def create
+    user = login(params[:email], params[:password])
+    if user
+      redirect_back_or_to root_path, notice: 'You are logged in'
+    else
+      render :new, alert: 'Wrong username or password'
+    end
+  end
+
+  def destroy
+    logout
+    redirect_to root_path, notice: 'You are logged out'
+  end
+
+end

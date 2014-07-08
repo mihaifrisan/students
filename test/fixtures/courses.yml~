@@ -5,7 +5,3 @@ one:
 two:
   id: 2
   name: Java_Applications
-
-three:
-  id: 3
-  name: Java_Applications
